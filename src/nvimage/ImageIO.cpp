@@ -56,9 +56,11 @@ extern "C" {
 
 #if defined(NV_HAVE_STBIMAGE)
 #   define STBI_NO_STDIO
+#   ifndef STB_IMAGE_IMPLEMENTATION
+#       define STB_IMAGE_IMPLEMENTATION
+#   endif()
 #   include <stb_image.h>
 #endif
-
 
 using namespace nv;
 
